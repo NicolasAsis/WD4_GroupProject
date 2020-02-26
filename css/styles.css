@@ -206,6 +206,10 @@ textarea{
     flex: 1;
     width: 400px;
 }
+.s-btn-full-reg{
+    flex: 1;
+    width: 100%;
+}
 .s-no-outline{
     border-top-style: hidden;
       border-right-style: hidden;
@@ -213,6 +217,30 @@ textarea{
       border-bottom-style: solid;
       border-bottom-color: white;
       background-color: #232323;
+}
+.s-no-outline-registration{
+    border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(89, 89, 89);
+      background-color: white;
+}
+
+.s-fc-gray{
+    color: gray;
+}
+.s-fc-white{
+    color: white;
+}
+.s-registration{
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw;
+}
+.s-login{
+    width: 30vw;
+    margin-top: 10%;
 }
 @media (max-width: 69.75rem) { 
 
@@ -230,6 +258,14 @@ textarea{
        position: relative;
        margin-top: 50px;
    }
+   .s-registration{
+    display: flex;
+    flex-direction: column;
+    }
+    .s-login{
+        width: 80vw;
+        margin-top: 10%;
+    }
    
 }
 
@@ -293,6 +329,10 @@ textarea{
     .card{
         width: 100%;
         margin: 0;
+    }
+    .s-registration{
+        display: flex;
+        flex-direction: column;
     }
     
  }
