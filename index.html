@@ -55,7 +55,7 @@
                         class="s-btn-border pl-3 pr-3 mr-2 font-weight-bold">Login</button></a>
             </div>
         </div>
-        <img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png">
+        <a href="./index.html"><img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png"></a>
         <button class="navbar-toggler s-ham" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <img width="28px" src="imgs/icon-ham.png">
@@ -73,7 +73,7 @@
     </div>
     <div>
         <h1>A NEW APPROACH TO INFRASTRUCTURE</h1>
-        <span class="s-subtitle">Changing how we build for people and nature in a rapidly warmming world</span>
+        <span class="s-subtitle">Changing how we build for people and nature in a rapidly warming world</span>
     </div>
 
     <!-- News -->
@@ -126,24 +126,15 @@
                 <div class="s-hordivider-orange"></div>
             </div>
 
-            <div class="s-form">
-                <div class="mr-5">
-                    <div class="s-form-left" style="color: white;">
-                        <form class="s-form-item">
-                            <label>Name</label>
-                            <input class="s-no-outline" placeholder="Will">
-                        </form>
-                    </div>
-                    <div class="s-form-left" style="color: white;">
-                        <form class="s-form-item">
-                            <label>Email</label>
-                            <input class="s-no-outline" placeholder="will.s@email.com">
-                        </form>
-                    </div>
-                </div>
-                <div class="s-desc">
-                    <textarea>Write something</textarea>
-                </div>
+            <div class="s-form-left" style="color: white;">
+                <form class="s-form-item">
+                    <label>Email</label>
+                    <input class="s-no-outline" placeholder="will.s@email.com">
+                </form>
+            </div>
+        </div>
+            <div class="s-desc">
+                <textarea placeholder="Write Something"></textarea>
             </div>
 
             <div class="mt-1">
