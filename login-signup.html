@@ -49,7 +49,7 @@
                 <!-- <a href="login-signup.html" class=" mt-2 "><button class="s-btn-border pl-3 pr-3 mr-2 font-weight-bold">Login</button></a> -->
             </div>
         </div>
-        <img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png">
+        <a href="./index.html"><img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png"></a>
         <button class="navbar-toggler s-ham" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <img width="28px" src="imgs/icon-ham.png">
@@ -78,22 +78,20 @@
             </form>
             <button class="s-btn-full-reg s-btn-sorange s-btn-border s-fc-white">Login</button>
         </div>
-
-        <div class="container s-login">
-            <h2>Sign Up</h2>
-            <form>
-                <div class="s-form-item">
-                    <label>Username</label>
-                    <input class="s-no-outline s-no-outline-registration " placeholder="Username">
-                </div>
-                <div class="s-form-item">
-                    <label>Password</label>
-                    <input class="s-no-outline s-no-outline-registration " placeholder="Password">
-                </div>
-                <div class="s-fc-gray" style="float: right; opacity: 0;">No account ? Signup first</div>
-            </form>
-            <button class="s-btn s-btn-full-reg s-btn-sorange s-btn-border s-fc-white">Signup</button>
-        </div>
+    <div class="container s-login">
+        <h2>Sign Up</h2>
+        <form action="signup.php" method="POST">
+            <div class="s-form-item">
+                <label>Username</label>
+                <input class="s-no-outline s-no-outline-registration " placeholder="Username" type="text" name="username" required>
+            </div>
+            <div class="s-form-item">
+                <label>Password</label>
+                <input class="s-no-outline s-no-outline-registration " placeholder="Password" type="text" name="password" required>
+            </div>
+            <div class="s-fc-gray" style="float: right; opacity: 0;">No account ? Signup first</div>
+            <button class="s-btn s-btn-full-reg s-btn-sorange s-btn-border s-fc-white" type="submit">Signup</button>
+        </form>
     </div>
 
 
