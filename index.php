@@ -1,5 +1,6 @@
 <!-- <?php
     echo "Hello World!";
+    include 'signup.php';
 ?> -->
 
 <!DOCTYPE html>
@@ -51,11 +52,11 @@
             <div class="s-nav-right-collapse-m s-nav-right-collapse-s s-nav-right">
                 <button class="s-btn s-btn-orange pl-3 pr-3 mr-2">Donate</button>
                 <button class="s-btn s-btn-sorange pl-3 pr-3 mr-2">Adopt</button>
-                <a href="login-signup.html" class=" mt-2 "><button
+                <a href="login-signup.php" class=" mt-2 "><button
                         class="s-btn-border pl-3 pr-3 mr-2 font-weight-bold">Login</button></a>
             </div>
         </div>
-        <a href="./index.html"><img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png"></a>
+        <a href="./index.php"><img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png"></a>
         <button class="navbar-toggler s-ham" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <img width="28px" src="imgs/icon-ham.png">
@@ -63,7 +64,7 @@
         <div class="s-nav-right-collapse-m s-nav-right-collapse-s s-nav-right s-nav-right-collapse-s-disappear">
             <button class="s-btn s-btn-orange pl-3 pr-3 mr-2">Donate</button>
             <button class="s-btn s-btn-sorange pl-3 pr-3 mr-2">Adopt</button>
-            <a href="login-signup.html" class="pl-3 pr-3"><button
+            <a href="login-signup.php" class="pl-3 pr-3"><button
                     class="s-btn-border pl-3 pr-3  font-weight-bold">Login</button></a>
         </div>
     </nav>

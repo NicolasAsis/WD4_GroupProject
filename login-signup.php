@@ -1,3 +1,8 @@
+<!-- <?php
+    echo "Hello World!";
+    require_once "./signup.php";
+    ?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +54,7 @@
                 <!-- <a href="login-signup.html" class=" mt-2 "><button class="s-btn-border pl-3 pr-3 mr-2 font-weight-bold">Login</button></a> -->
             </div>
         </div>
-        <a href="./index.html"><img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png"></a>
+        <a href="./index.php"><img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png"></a>
         <button class="navbar-toggler s-ham" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <img width="28px" src="imgs/icon-ham.png">
@@ -80,7 +85,7 @@
         </div>
     <div class="container s-login">
         <h2>Sign Up</h2>
-        <form action="signup.php" method="POST">
+        <form method="POST">
             <div class="s-form-item">
                 <label>Username</label>
                 <input class="s-no-outline s-no-outline-registration " placeholder="Username" type="text" name="username" required>
