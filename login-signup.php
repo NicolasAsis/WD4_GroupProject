@@ -1,3 +1,8 @@
+<!-- <?php
+    echo "Hello World!";
+    require_once "./signup.php";
+    ?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +85,7 @@
         </div>
     <div class="container s-login">
         <h2>Sign Up</h2>
-        <form action="signup.php" method="POST">
+        <form method="POST">
             <div class="s-form-item">
                 <label>Username</label>
                 <input class="s-no-outline s-no-outline-registration " placeholder="Username" type="text" name="username" required>
