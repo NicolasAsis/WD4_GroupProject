@@ -3,7 +3,9 @@
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.07);
     border-style: none;
 }
-
+.s-fs30{
+    font-size: 1.875rem;
+}
 .s-btn{
     color: #fff;
     border-style: none;
@@ -20,6 +22,10 @@
 .s-btn-border{
     border-color: #FF5C00;
     border-radius: 3px;
+}
+.s-btn-del{
+    border-style: none;
+    background-color: #232322;
 }
 .s-nav-right{
     margin-right: 6.25rem;
@@ -101,6 +107,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 10px;
 }
 .s-t4{
     background-image: url(../imgs/tuna.jpg);
@@ -118,7 +125,11 @@ h1{
     background-size: cover;
     border-radius: 3px;
     position: relative;
+    margin-right: 10px;
 }
+
+
+
 .s-t2:hover{
     background-color: #232323;
 }
@@ -128,10 +139,20 @@ h1{
     font-size: 30px;
     display: none;
 }
+
 .s-actnow:hover{
     display: block;
 }
+
 .s-news{
+    margin-top: 1.875rem;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.s-news-wrap{
     margin-top: 1.875rem;
     max-width: 1000px;
     margin: auto;
@@ -149,6 +170,10 @@ h1{
     border-radius: 0 0 3px 3px;
     font-size: 16px;
     padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .s-news-card-title{
     font-size: 24px;
@@ -206,6 +231,10 @@ textarea{
     flex: 1;
     width: 400px;
 }
+.s-btn-full-reg{
+    flex: 1;
+    width: 100%;
+}
 .s-no-outline{
     border-top-style: hidden;
       border-right-style: hidden;
@@ -213,6 +242,69 @@ textarea{
       border-bottom-style: solid;
       border-bottom-color: white;
       background-color: #232323;
+}
+.s-no-outline-registration{
+    border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(89, 89, 89);
+      background-color: white;
+}
+.s-fc-black{
+    color: #232323;
+}
+.s-fc-gray{
+    color: gray;
+}
+.s-fc-white{
+    color: white;
+}
+.s-registration{
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw;
+}
+.s-login{
+    width: 30vw;
+    margin-top: 10%;
+}
+.s-success{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.s-logo{
+    width: 8.125rem;
+    margin-top: 15%;
+}
+.s-welcome{
+    text-align: center;
+}
+.s-welcome-link{
+    display: flex;
+    justify-content: space-evenly;
+}
+.s-btn-green{
+    background-color: rgb(70, 185, 81);
+}
+.s-news-list{
+    color: #232322 !important;
+    position: relative;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #232323 !important;
+}
+.s-news-list-item{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E1E1E1;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 @media (max-width: 69.75rem) { 
 
@@ -230,6 +322,25 @@ textarea{
        position: relative;
        margin-top: 50px;
    }
+   .s-registration{
+    display: flex;
+    flex-direction: column;
+    }
+    .s-login{
+        width: 80vw;
+        margin-top: 10%;
+    }
+    .s-news-wrap{
+        margin-top: 1.875rem;
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+   
+    
    
 }
 
@@ -293,6 +404,22 @@ textarea{
     .card{
         width: 100%;
         margin: 0;
+    }
+    .s-registration{
+        display: flex;
+        flex-direction: column;
+    }
+    .s-sm-wrap{
+        flex-wrap: wrap;
+    }
+    .s-news-test{
+        margin-top: 1.875rem;
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
     }
     
  }
