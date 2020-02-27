@@ -51,7 +51,7 @@
             <div class="s-nav-right-collapse-m s-nav-right-collapse-s s-nav-right">
                 <button class="s-btn s-btn-orange pl-3 pr-3 mr-2">Donate</button>
                 <button class="s-btn s-btn-sorange pl-3 pr-3 mr-2">Adopt</button>
-                <a href="login-signup.html" class=" mt-2 "><button
+                <a href="login-signup.php" class=" mt-2 "><button
                         class="s-btn-border pl-3 pr-3 mr-2 font-weight-bold">Login</button></a>
             </div>
         </div>
@@ -64,7 +64,7 @@
         <div class="s-nav-right-collapse-m s-nav-right-collapse-s s-nav-right s-nav-right-collapse-s-disappear">
             <button class="s-btn s-btn-orange pl-3 pr-3 mr-2">Donate</button>
             <button class="s-btn s-btn-sorange pl-3 pr-3 mr-2">Adopt</button>
-            <a href="login-signup.html" class="pl-3 pr-3"><button
+            <a href="login-signup.php" class="pl-3 pr-3"><button
                     class="s-btn-border pl-3 pr-3  font-weight-bold">Login</button></a>
         </div>
     </nav>

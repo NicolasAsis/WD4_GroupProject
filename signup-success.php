@@ -37,7 +37,7 @@
         <div class=" s-fs30 mt-5">Welcome <span class="font-weight-bold">$username!</span></div>
         <div class="s-welcome-link">
             <!-- <a href="#">Sign out</a> -->
-            <a href="login-signup.html" class="s-fc-black">Login</a>
+            <a href="login-signup.php" class="s-fc-black">Login</a>
             <a href="admin.php" class="s-fc-black">Manage News</a>
         </div>
     </div>
