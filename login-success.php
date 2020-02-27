@@ -1,10 +1,14 @@
+<!-- <?php
+    echo "Hello World!";
+    ?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Successfully!</title>
+    <title>Login Successfully!</title>
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -30,10 +34,10 @@
 <body class="container s-success">
     <img class="s-logo " src="imgs/logo-s.png">
     <div class="s-welcome">
-        <div class=" s-fs30 mt-5">Welcome <span class="font-weight-bold">$username!</span></div>
+        <div class=" s-fs30 mt-5">Welcome Back <span class="font-weight-bold">$username!</span></div>
         <div class="s-welcome-link">
-            <!-- <a href="#">Sign out</a> -->
-            <a href="login-signup.html" class="s-fc-black">Login</a>
+            <a href="#">Sign out</a>
+            <a href="index.html" class="s-fc-black">Go to Home</a>
             <a href="admin.php" class="s-fc-black">Manage News</a>
         </div>
     </div>
