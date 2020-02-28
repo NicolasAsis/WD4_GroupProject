@@ -37,7 +37,7 @@
         <div class=" s-fs30 mt-5">Welcome Back <span class="font-weight-bold">$username!</span></div>
         <div class="s-welcome-link">
             <a href="#">Sign out</a>
-            <a href="index.html" class="s-fc-black">Go to Home</a>
+            <a href="index.php" class="s-fc-black">Go to Home</a>
             <a href="admin.php" class="s-fc-black">Manage News</a>
         </div>
     </div>

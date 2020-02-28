@@ -1,6 +1,5 @@
 <!-- <?php
     echo "Hello World!";
-    include 'signup.php';
 ?> -->
 
 <!DOCTYPE html>
@@ -56,7 +55,8 @@
                         class="s-btn-border pl-3 pr-3 mr-2 font-weight-bold">Login</button></a>
             </div>
         </div>
-        <a href="./index.php"><img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px" src="imgs/logo-s.png"></a>
+        <a href="./index.php"><img class="mr-5 s-logo-collapse-m s-logo-collapse-s" width="60px"
+                src="imgs/logo-s.png"></a>
         <button class="navbar-toggler s-ham" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <img width="28px" src="imgs/icon-ham.png">
@@ -84,6 +84,7 @@
         <div class="s-hordivider"></div>
     </div>
 
+    <!-- For demo -->
     <div class="s-news container">
         <div class="s-t1 mt-3 card">
             <div class="s-news-thumb-title">Video: Stunning footage of snow leopard and her quadruplet cubs</div>
@@ -100,14 +101,79 @@
                 species.</div>
         </div>
     </div>
+
     <div class="s-news container">
         <div class="s-t4 mt-3 card">
             <div class="s-news-thumb-title">Setting the line on transparency in tuna fishing</div>
         </div>
         <div class="s-t5 mt-3 card">
-            <div class="s-news-thumb-title">Setting the line on transparency in tuna fishing</div>
+            <div class="s-news-thumb-title">The human health and conservation connection</div>
         </div>
     </div>
+
+    <div class="s-news container mt-3">
+        <button type="button" class="s-btn s-btn-border s-btn-full s-btn-green p-2 mr-2" data-toggle="modal"
+            data-target="#exampleModal" data-whatever="@mdo">Add News</button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adding News</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Title</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Image URL</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="s-btn s-btn-border p-2 btn-secondary"
+                        data-dismiss="modal">Close</button>
+                    <button type="button" class="s-btn s-btn-border p-2 s-btn-orange">Add News</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- From database -->
+   
+        <div class="s-news-wrap s-sm-wrap container">
+            <div class="mt-3 card" style="
+                background-image: url(https://www.petmd.com/sites/default/files/puppy-potty-training-388719256.jpg);
+                width: 100%;
+                height: 350px;
+                background-size: cover;
+                border-radius: 3px;
+                position: relative;
+                margin-right:10px;
+            ">
+                <div class="s-news-thumb-title">
+                    <div>$title</div>
+                    <button class='s-btn-del'><img width='30px' src="./imgs/icon-del.png"></button>
+                </div>
+            </div>
+        </div>
+  
+
+
+
+
+
+
+
 
     <!-- Volunteer -->
     <div class="s-titletag ">
@@ -127,19 +193,28 @@
                 <div class="s-hordivider-orange"></div>
             </div>
 
-            <div class="s-form-left" style="color: white;">
-                <form class="s-form-item">
-                    <label>Email</label>
-                    <input class="s-no-outline" placeholder="will.s@email.com">
-                </form>
-            </div>
-        </div>
-            <div class="s-desc">
-                <textarea placeholder="Write Something"></textarea>
+            <div class="s-form">
+                <div class="mr-5">
+                    <div class="s-form-left" style="color: white;">
+                        <form class="s-form-item">
+                            <label>Name</label>
+                            <input class="s-no-outline" placeholder="Will">
+                        </form>
+                    </div>
+                    <div class="s-form-left" style="color: white;">
+                        <form class="s-form-item">
+                            <label>Email</label>
+                            <input class="s-no-outline" placeholder="will.s@email.com">
+                        </form>
+                    </div>
+                </div>
+                <div class="s-desc">
+                    <textarea>Write something</textarea>
+                </div>
             </div>
 
-            <div class="mt-1">
-                <button class="s-btn s-btn-full s-btn-orange s-btn-full">SEND MESSAGE</button>
+            <div class="mt-1 pb-4">
+                <button class="s-btn s-btn-orange s-btn-full">SEND MESSAGE</button>
             </div>
         </div>
     </footer>
@@ -159,6 +234,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="<?php echo $url?>/script.js"></script>
 </body>
 
 </html>
