@@ -22,8 +22,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             if(password_verify($password,$password2)){
                 $_SESSION['username'] = $username;
-                header("location:login-signup.php");
-                echo "<script type='text/javascript'>alert('Login Successful');</script>";
+                // console.log("hello");
+                // console.log($_SESSION['username']);
+                // echo "<script type='text/javascript'>console.log('".$_SESSION['username']."');</script>";
+                echo "<script type='text/javascript'>window.location='login-success.php';</script>";
+                
+                //  header("Location:'./signup-success.php'");
+                 exit();
             }
             else {
                 echo "<script type='text/javascript'>alert('Wrong credentials');</script>";

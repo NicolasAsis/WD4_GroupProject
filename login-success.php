@@ -1,5 +1,5 @@
 <!-- <?php
-    echo "Hello World!";
+    session_start();
     ?> -->
 
 <!DOCTYPE html>
@@ -34,7 +34,12 @@
 <body class="container s-success">
     <img class="s-logo " src="imgs/logo-s.png">
     <div class="s-welcome">
-        <div class=" s-fs30 mt-5">Welcome Back <span class="font-weight-bold">$username!</span></div>
+        <?php 
+            $userName = $_SESSION['username'];
+            echo "<div class=' s-fs30 mt-5'>Welcome back<span class='font-weight-bold'>". $_SESSION['username'] . "!</span></div>";
+            echo "<script type='text/javascript'>alert('".$_SESSION['username']."');</script";
+        ?>
+        <!-- <div class=" s-fs30 mt-5">Welcome Back <span class="font-weight-bold">$username!</span></div> -->
         <div class="s-welcome-link">
             <a href="#">Sign out</a>
             <a href="index.php" class="s-fc-black">Go to Home</a>

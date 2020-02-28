@@ -1,7 +1,3 @@
-<!-- <?php
-    echo "Hello World!";
-    ?> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,3 +51,6 @@
 </body>
 
 </html>
+
+<?php
+    echo "Hello World!";

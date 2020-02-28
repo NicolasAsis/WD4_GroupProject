@@ -73,7 +73,7 @@
                 </div>
                 <div class="s-form-item">
                     <label>Password</label>
-                    <input class="s-no-outline s-no-outline-registration " placeholder="Password" text="text" name="password" required>
+                    <input class="s-no-outline s-no-outline-registration " placeholder="Password" type="password" name="password" required>
                 </div>
                 <div class="s-fc-gray" style="float: right;">No account ? Signup first</div>
                 <button class="s-btn-full-reg s-btn-sorange s-btn-border s-fc-white" type="submit" name="login">Login</button>
