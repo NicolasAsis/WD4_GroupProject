@@ -66,7 +66,7 @@
     <div class="s-registration container">
         <div class="container s-login">
             <h2>Login</h2>
-            <form method="POST">
+            <form method="POST" action="login.php">
                 <div class="s-form-item">
                     <label>Username</label>
                     <input class="s-no-outline s-no-outline-registration " placeholder="Username" type="text" name="username" required>
@@ -113,4 +113,4 @@
 
 <?php
     include "./signup.php";
-    include "./login.php";
+    // include "./login.php";
