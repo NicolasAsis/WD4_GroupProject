@@ -1,7 +1,3 @@
-<!-- <?php
-    echo "Hello World!";
-    require_once "./signup.php";
-    ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,19 +66,21 @@
     <div class="s-registration container">
         <div class="container s-login">
             <h2>Login</h2>
-            <form>
+            <form method="POST">
                 <div class="s-form-item">
                     <label>Username</label>
-                    <input class="s-no-outline s-no-outline-registration " placeholder="Username">
+                    <input class="s-no-outline s-no-outline-registration " placeholder="Username" type="text" name="username" required>
                 </div>
                 <div class="s-form-item">
                     <label>Password</label>
-                    <input class="s-no-outline s-no-outline-registration " placeholder="Password">
+                    <input class="s-no-outline s-no-outline-registration " placeholder="Password" text="text" name="password" required>
                 </div>
                 <div class="s-fc-gray" style="float: right;">No account ? Signup first</div>
+                <button class="s-btn-full-reg s-btn-sorange s-btn-border s-fc-white" type="submit" name="login">Login</button>
             </form>
-            <button class="s-btn-full-reg s-btn-sorange s-btn-border s-fc-white">Login</button>
         </div>
+
+    <!-- Signup Form -->
     <div class="container s-login">
         <h2>Sign Up</h2>
         <form method="POST">
@@ -95,7 +93,7 @@
                 <input class="s-no-outline s-no-outline-registration " placeholder="Password" type="text" name="password" required>
             </div>
             <div class="s-fc-gray" style="float: right; opacity: 0;">No account ? Signup first</div>
-            <button class="s-btn s-btn-full-reg s-btn-sorange s-btn-border s-fc-white" type="submit">Signup</button>
+            <button class="s-btn s-btn-full-reg s-btn-sorange s-btn-border s-fc-white" type="submit" name="submit" >Signup</button>
         </form>
     </div>
 
@@ -112,3 +110,6 @@
 </body>
 
 </html>
+<?php
+    include "./signup.php";
+    include "./login.php";
