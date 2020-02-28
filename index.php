@@ -1,7 +1,3 @@
-<!-- <?php
-    echo "Hello World!";
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +26,7 @@
             font-family: 'Quicksand';
         }
     </style>
+    <!-- <script src="jquery-3.4.1.min.js"></script> -->
 </head>
 
 <body>
@@ -116,6 +113,7 @@
             data-target="#exampleModal" data-whatever="@mdo">Add News</button>
     </div>
 
+    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -127,22 +125,23 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form method='POST'>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Title</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="recipient-name" name="title">
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Image URL</label>
-                            <textarea class="form-control" id="message-text"></textarea>
+                            <textarea class="form-control" id="message-text" name="imgUrl"></textarea>
                         </div>
+                        <button type="submit" class="s-btn s-btn-border p-2 s-btn-orange" name="addPost">Add News</button>
                     </form>
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="s-btn s-btn-border p-2 btn-secondary"
                         data-dismiss="modal">Close</button>
                     <button type="button" class="s-btn s-btn-border p-2 s-btn-orange">Add News</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -150,7 +149,7 @@
 
     <!-- From database -->
    
-        <div class="s-news-wrap s-sm-wrap container">
+        <!-- <div class="s-news-wrap s-sm-wrap container">
             <div class="mt-3 card" style="
                 background-image: url(https://www.petmd.com/sites/default/files/puppy-potty-training-388719256.jpg);
                 width: 100%;
@@ -165,16 +164,65 @@
                     <button class='s-btn-del'><img width='30px' src="./imgs/icon-del.png"></button>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <?php
+
+            $conn = new mysqli("localhost", "root", "root", "webdev4_assignment");
+            $sql = "SELECT * FROM news";
+    
+            $table = mysqli_query($conn,$sql);
+
+            while($row=mysqli_fetch_array($table)){
+                echo '
+                    <div class="s-news-wrap s-sm-wrap container">
+                    <div class="mt-3 card" style="
+                        background-image: url('.$row['news_imgUrl'].');
+                        width: 100%;
+                        height: 350px;
+                        background-size: cover;
+                        border-radius: 3px;
+                        position: relative;
+                        margin-right:10px;
+                    ">
+                        <div class="s-news-thumb-title">
+                            <div>'.$row['news_title'].'</div>
+                            <form method="POST">
+                            <button class="s-btn-del"><img width="30px" src="./imgs/icon-del.png" name="delete" onclick="DeleteNews('.$row['id'].')"></button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                ';
+            }
+
+
+             // if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            //     // alert("Hello");
+            //     if(isset($_POST['delete'])){
+            //         $username = $_POST['username'];
+            //         $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+            
+            //         // echo $username;
+            //         if ($conn->connect_error) {
+            //             die("Connection failed: " . $conn->connect_error);
+            //         }
+            
+            //         $sql = "INSERT INTO users(username,password) VALUES ('$username','$password')";
+            
+            //         if ($conn->query($sql) === TRUE) {
+            //             echo "<script type='text/javascript'>alert('New account created successfully');</script>";
+            //             // console.log("New record created successfully");
+            //             // alert("New record created");
+            //             exit();
+            //         } else {
+            //             echo "Error: " . $sql . "<br>" . $conn->error;
+            //         }
+            
+            //     }
+            // }
+        ?>
   
-
-
-
-
-
-
-
-
     <!-- Volunteer -->
     <div class="s-titletag ">
         <div class="s-hordivider"></div>
@@ -209,7 +257,7 @@
                     </div>
                 </div>
                 <div class="s-desc">
-                    <textarea>Write something</textarea>
+                    <textarea placeholder="Write something"></textarea>
                 </div>
             </div>
 
@@ -218,12 +266,6 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -235,6 +277,35 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script src="<?php echo $url?>/script.js"></script>
+    <script> 
+        function DeleteNews(postId) {
+        // $.ajax({
+        //     type:"POST",
+        //     url:"delete.php",
+        //     data:{"id":postId},
+        //     success:function(html) {
+        //         alert(html);
+        //     }
+        // });
+        // return false;
+
+        // alert("Hi");
+        // alert(postId);
+
+        var info = new FormData();
+        info.append("postId",postId);
+
+        var postData = new XMLHttpRequest();
+        
+        postData.open("POST", "./deletePost.php", true);
+        postData.send(info);
+        
+    }
+    </script>
+ 
 </body>
 
 </html>
+
+<?php
+    include "./add-post.php";
