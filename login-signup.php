@@ -110,6 +110,7 @@
 </body>
 
 </html>
+
 <?php
     include "./signup.php";
     include "./login.php";

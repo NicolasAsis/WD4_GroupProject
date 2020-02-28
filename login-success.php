@@ -1,6 +1,6 @@
-<!-- <?php
-    session_start();
-    ?> -->
+<?php
+    // session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Successfully!</title>
+    <title>Login Successful!</title>
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -35,9 +35,16 @@
     <img class="s-logo " src="imgs/logo-s.png">
     <div class="s-welcome">
         <?php 
-            $userName = $_SESSION['username'];
-            echo "<div class=' s-fs30 mt-5'>Welcome back<span class='font-weight-bold'>". $_SESSION['username'] . "!</span></div>";
-            echo "<script type='text/javascript'>alert('".$_SESSION['username']."');</script";
+            // session_start();
+            // var_dump($_SESSION['username']);
+            // var_dump(session_id());
+            // var_dump($_SESSION);
+            if(isset($_SESSION['username'])){
+                echo '<div class=" s-fs30 mt-5">Welcome back <span class="font-weight-bold">"'.$_SESSION['username'].'"!</span></div>';
+            }
+            else{
+                echo '<div class=" s-fs30 mt-5">Welcome back <span class="font-weight-bold">!</span></div>';
+            }
         ?>
         <!-- <div class=" s-fs30 mt-5">Welcome Back <span class="font-weight-bold">$username!</span></div> -->
         <div class="s-welcome-link">

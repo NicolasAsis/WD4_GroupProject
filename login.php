@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $conn = new mysqli("localhost", "root", "root", "webdev4_assignment");
@@ -26,9 +25,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 // console.log($_SESSION['username']);
                 // echo "<script type='text/javascript'>console.log('".$_SESSION['username']."');</script>";
                 echo "<script type='text/javascript'>window.location='login-success.php';</script>";
-                
-                //  header("Location:'./signup-success.php'");
+                // phpinfo();
                  exit();
+                // var_dump(session_id());
             }
             else {
                 echo "<script type='text/javascript'>alert('Wrong credentials');</script>";
