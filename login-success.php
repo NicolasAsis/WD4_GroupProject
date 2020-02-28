@@ -38,7 +38,7 @@
             // session_start();
             // var_dump($_SESSION['username']);
             // var_dump(session_id());
-            // var_dump($_SESSION);
+            // var_dump($_SESSION['username']);
             if(isset($_SESSION['username'])){
                 echo '<div class=" s-fs30 mt-5">Welcome back <span class="font-weight-bold">"'.$_SESSION['username'].'"!</span></div>';
             }

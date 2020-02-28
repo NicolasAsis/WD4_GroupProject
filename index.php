@@ -240,30 +240,31 @@
                 <h3 style="color: white; margin-top: -30px;">CONTACT US</h3>
                 <div class="s-hordivider-orange"></div>
             </div>
-
+            <form method='POST'>
             <div class="s-form">
                 <div class="mr-5">
                     <div class="s-form-left" style="color: white;">
-                        <form class="s-form-item">
+                        <div class="s-form-item">
                             <label>Name</label>
-                            <input class="s-no-outline" placeholder="Will">
-                        </form>
+                            <input class="s-no-outline" placeholder="Will" name="firstName" type="text">
+                         </div>
                     </div>
                     <div class="s-form-left" style="color: white;">
-                        <form class="s-form-item">
+                        <div class="s-form-item">
                             <label>Email</label>
-                            <input class="s-no-outline" placeholder="will.s@email.com">
-                        </form>
+                            <input class="s-no-outline" placeholder="will.s@email.com" name='email' type='text'>
+                        </div>
                     </div>
                 </div>
                 <div class="s-desc">
-                    <textarea placeholder="Write something"></textarea>
+                    <textarea placeholder="Write something" name='msg' type='text'></textarea>
                 </div>
             </div>
 
             <div class="mt-1 pb-4">
-                <button class="s-btn s-btn-orange s-btn-full">SEND MESSAGE</button>
+                <button class="s-btn s-btn-orange s-btn-full" type='submit' name='contactBut'>SEND MESSAGE</button>
             </div>
+            </form>
         </div>
     </footer>
 
@@ -309,3 +310,4 @@
 
 <?php
     include "./add-post.php";
+    include "./contact.php";
