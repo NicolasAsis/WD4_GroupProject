@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +40,7 @@
             // var_dump(session_id());
             // var_dump($_SESSION['username']);
             if(isset($_SESSION['username'])){
-                echo '<div class=" s-fs30 mt-5">Welcome back <span class="font-weight-bold">"'.$_SESSION['username'].'"!</span></div>';
+                echo '<div class=" s-fs30 mt-5">Welcome back <span class="font-weight-bold">'.$_SESSION['username'].'!</span></div>';
             }
             else{
                 echo '<div class=" s-fs30 mt-5">Welcome back <span class="font-weight-bold">!</span></div>';

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,8 +65,16 @@
         <div class="s-nav-right-collapse-m s-nav-right-collapse-s s-nav-right s-nav-right-collapse-s-disappear">
             <button class="s-btn s-btn-orange pl-3 pr-3 mr-2">Donate</button>
             <button class="s-btn s-btn-sorange pl-3 pr-3 mr-2">Adopt</button>
-            <a href="login-signup.php" class="pl-3 pr-3"><button
-                    class="s-btn-border pl-3 pr-3  font-weight-bold">Login</button></a>
+
+            <?php
+                if(isset($_SESSION['username'])) {
+                    echo '<a href="login-signup.php" class="pl-3 pr-3"><button class="s-btn-border pl-3 pr-3  font-weight-bold">Logout</button></a>';
+                }
+                else {
+                    echo '<a href="login-signup.php" class="pl-3 pr-3"><button class="s-btn-border pl-3 pr-3  font-weight-bold">Login</button></a>';
+                }
+            ?>
+            <!-- <a href="login-signup.php" class="pl-3 pr-3"><button class="s-btn-border pl-3 pr-3  font-weight-bold">Login</button></a> -->
         </div>
     </nav>
 
@@ -134,7 +146,15 @@
                             <label for="message-text" class="col-form-label">Image URL</label>
                             <textarea class="form-control" id="message-text" name="imgUrl"></textarea>
                         </div>
-                        <button type="submit" class="s-btn s-btn-border p-2 s-btn-orange" name="addPost">Add News</button>
+                        <?php
+                            if(isset($_SESSION['username'])){
+                                echo '<button type="submit" class="s-btn s-btn-border p-2 s-btn-orange" name="addPost">Add News</button>';
+                            }
+                            else {
+                                echo '<div> </div>';
+                            }
+                        ?>
+                        <!-- <button type="submit" class="s-btn s-btn-border p-2 s-btn-orange" name="addPost">Add News</button> -->
                     </form>
                 </div>
                 <!-- <div class="modal-footer">
@@ -166,13 +186,15 @@
             </div>
         </div> -->
 
+        <!-- Mapping Out -->
         <?php
 
             $conn = new mysqli("localhost", "root", "root", "webdev4_assignment");
             $sql = "SELECT * FROM news";
     
             $table = mysqli_query($conn,$sql);
-
+            
+        if(isset($_SESSION['username'])){
             while($row=mysqli_fetch_array($table)){
                 echo '
                     <div class="s-news-wrap s-sm-wrap container">
@@ -195,6 +217,9 @@
                     </div>
                 ';
             }
+        } else {
+            echo '<div></div>';
+        }
 
 
              // if($_SERVER['REQUEST_METHOD'] == 'POST'){
